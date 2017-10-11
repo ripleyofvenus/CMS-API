@@ -1,7 +1,8 @@
 #!/bin/bash
+TOKEN=4YWAvnStNVXLhgct0xMktSvgVB6lfFp8VYf9GSYM23U=--DpfEBpBI8jUKZOaK5WC8RKlx1W3pW/W1hhBDIhi3sEo=
 
 API="http://localhost:4741"
-URL_PATH="/examples"
+URL_PATH="/contents"
 
 curl "${API}${URL_PATH}/${ID}" \
   --include \
@@ -9,8 +10,11 @@ curl "${API}${URL_PATH}/${ID}" \
   --header "Content-Type: application/json" \
   --header "Authorization: Token token=${TOKEN}" \
   --data '{
-    "example": {
-      "text": "'"${TEXT}"'"
+    "content": {
+      "title": "'"${TITLE}"'",
+      "date": "2018-10-11",
+      "type": "page",
+      "text": "kitties are awsomer"
     }
   }'
 
