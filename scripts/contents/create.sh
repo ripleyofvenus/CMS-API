@@ -1,7 +1,9 @@
 #!/bin/bash
 
-TOKEN=4YWAvnStNVXLhgct0xMktSvgVB6lfFp8VYf9GSYM23U=--DpfEBpBI8jUKZOaK5WC8RKlx1W3pW/W1hhBDIhi3sEo=
-API="http://localhost:4741"
+TOKEN=y5U5DQHfTlvURzH2Ar7AvtGgns+TFLibbDKPC69x3Ik=--N2wUBZFu2uEmkHLic3c92CN3rdvHd7NBVMoBuntmLbE=
+# API="http://localhost:4741"
+API="http://sserpdrow-api.herokuapp.com"
+
 URL_PATH="/contents"
 
 curl "${API}${URL_PATH}" \
@@ -12,7 +14,7 @@ curl "${API}${URL_PATH}" \
   --data '{
     "content": {
       "title": "'"${TITLE}"'",
-      "date": "2017-10-11",
+      "date": "2011-10-11",
       "type": "blog",
       "text": "puppies are awesome"
     }
