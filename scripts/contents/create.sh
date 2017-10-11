@@ -1,7 +1,6 @@
 #!/bin/bash
 
-TOKEN=Ufo7tyLaCkmHhyokY4XW3Wse3H/qaDz7n0Bo/+TSK88=--tlUjPeie8+PiG60/j6y16mA9lPWk20rRRx5SGS5cDXU=
-
+TOKEN=4YWAvnStNVXLhgct0xMktSvgVB6lfFp8VYf9GSYM23U=--DpfEBpBI8jUKZOaK5WC8RKlx1W3pW/W1hhBDIhi3sEo=
 API="http://localhost:4741"
 URL_PATH="/contents"
 
