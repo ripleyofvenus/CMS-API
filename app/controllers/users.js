@@ -108,13 +108,27 @@ const changepw = (req, res, next) => {
   ).catch(makeErrorHandler(res, next))
 }
 
+// get user by email
+const showuser = (req, res, next) => {
+  const email = req.params.email
+  User.findOne({ email: email })
+    .then(user => {
+      user = user.toObject()
+      delete user.passwordDigest
+      res.json({ user })
+      return user
+    })
+    .catch(makeErrorHandler(res, next))
+}
+
 module.exports = controller({
   index,
   show,
+  showuser,
   signup,
   signin,
   signout,
   changepw
 }, { before: [
-  { method: authenticate, except: ['signup', 'signin'] }
+  { method: authenticate, except: ['signup', 'signin', 'showuser'] }
 ] })
