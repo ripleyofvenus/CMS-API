@@ -1,7 +1,7 @@
 #!/bin/bash
 
-# API="http://localhost:4741"
-API="http://sserpdrow-api.herokuapp.com"
+API="http://localhost:4741"
+# API="http://sserpdrow-api.herokuapp.com"
 URL_PATH="/sign-up"
 
 curl "${API}${URL_PATH}" \
