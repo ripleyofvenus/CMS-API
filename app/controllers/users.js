@@ -115,6 +115,10 @@ const showuser = (req, res, next) => {
     .then(user => {
       user = user.toObject()
       delete user.passwordDigest
+      delete user.password
+      delete user.token
+      delete user.createdAt
+      delete user.updatedAt
       res.json({ user })
       return user
     })
