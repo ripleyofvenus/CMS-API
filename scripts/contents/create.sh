@@ -1,8 +1,8 @@
 #!/bin/bash
 
-TOKEN=y5U5DQHfTlvURzH2Ar7AvtGgns+TFLibbDKPC69x3Ik=--N2wUBZFu2uEmkHLic3c92CN3rdvHd7NBVMoBuntmLbE=
-# API="http://localhost:4741"
-API="http://sserpdrow-api.herokuapp.com"
+TOKEN=SvVqkDH71nyRsyGnqAHBkC5KFviVbsg7sZbeZxUWs3k=--VSrJN/p741QUnGak4atg/KdEzRY+K+M3PVv34CHUE8M=
+API="http://localhost:4741"
+# API="http://sserpdrow-api.herokuapp.com"
 
 URL_PATH="/contents"
 
