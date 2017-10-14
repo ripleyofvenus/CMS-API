@@ -21,6 +21,7 @@ our planning process, etc.: https://github.com/D0Minators/CMS
 # Entity Relationship Diagram
 
 ![CMS ERD](/cms-erd.JPG)
+<img src="/cms-erd.JPG" width="48">
 
 # Our development process and problem-solving strategy
 We began this full-stack project by implementing the back-end. All four of us
