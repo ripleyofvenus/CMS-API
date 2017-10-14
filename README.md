@@ -37,7 +37,7 @@ so that we could allow visitors to enter an email address of a user that had
 created contents and view that content without logging in.
 
 
-## A Message for my colleagues
+## Obligatory cute puppy photo
 
 ![Obligatory Puppy photo](/boston_terrier.jpg)
 
