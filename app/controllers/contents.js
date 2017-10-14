@@ -3,6 +3,7 @@
 const controller = require('lib/wiring/controller')
 const models = require('app/models')
 const Content = models.content
+const User = models.user
 
 const authenticate = require('./concerns/authenticate')
 const setUser = require('./concerns/set-current-user')
@@ -14,6 +15,19 @@ const index = (req, res, next) => {
       contents: contents.map((e) =>
         e.toJSON({ virtuals: true, user: req.user }))
     }))
+    .catch(next)
+}
+
+const findByOwnerEmail = (req, res, next) => {
+  User.findOne({ email: req.params.email })
+    .then(user => {
+      user = user.toObject()
+      Content.find({ _owner: user.id })
+        .then(contents => res.json({
+          contents: contents.map((content) =>
+            content.toJSON({ virtuals: true, user: req.user }))
+        }))
+    })
     .catch(next)
 }
 
@@ -54,10 +68,11 @@ module.exports = controller({
   show,
   create,
   update,
-  destroy
+  destroy,
+  findByOwnerEmail
 }, { before: [
   { method: setUser, only: ['index', 'show'] },
-  { method: authenticate, except: ['index', 'show'] },
+  { method: authenticate, except: ['index', 'show', 'findByOwnerEmail'] },
   { method: setModel(Content), only: ['show'] },
   { method: setModel(Content, { forUser: true }), only: ['update', 'destroy'] }
 ] })

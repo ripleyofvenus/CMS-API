@@ -12,7 +12,7 @@ module.exports = require('lib/wiring/routes')
 .resources('contents')
 
 // visitor routes
-.get('/show-user/:email', 'users#showuser')
+.get('/find-by-email/:email', 'contents#findByOwnerEmail')
 
 // users of the app have special requirements
 .post('/sign-up', 'users#signup')
